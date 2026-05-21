@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranking - EcoConecta</title>
+  <link rel="stylesheet" href="../style/style.css">
+
+  <style>
+    .container{
+      height:640px;
+    }
+
+    .top{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      margin-top:5px;
+    }
+
+    .title{
+      margin-top:8px;
+      font-size:34px;
+      font-weight:bold;
+      color:#111;
+    }
+
+    .tabela{
+      margin-top:40px;
+      width:100%;
+      border-collapse:collapse;
+    }
+
+    .tabela th{
+      text-align:left;
+      font-size:13px;
+      color:#555;
+      padding:8px 12px;
+      border-bottom:2px solid #8bab63;
+    }
+
+    .tabela td{
+      padding:10px 12px;
+      font-size:14px;
+      color:#26411b;
+      border-bottom:1px solid #bde27d;
+    }
+
+    .tabela .pos{
+      font-weight:bold;
+      text-align:center;
+      width:40px;
+    }
+
+    .tabela .ouro{
+      color:#b8860b;
+    }
+
+    .tabela .prata{
+      color:#708090;
+    }
+
+    .tabela .bronze{
+      color:#cd7f32;
+    }
+
+    .tabela .pts{
+      font-weight:bold;
+      text-align:right;
+    }
+
+    @media(max-width:900px){
+      .tabela{
+        font-size:12px;
+      }
+
+      .tabela td,
+      .tabela th{
+        padding:6px 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <a class="back-btn" href="recicle.html">Voltar</a>
+
+    <div class="top">
+      <div class="logo">
+        <img src="../images/image.png" alt="EcoConecta">
+      </div>
+      <div class="title">Ranking</div>
+    </div>
+
+    <table class="tabela">
+      <thead>
+        <tr>
+          <th class="pos">#</th>
+          <th>Usuário</th>
+          <th>Selos</th>
+          <th class="pts">Pontos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="pos ouro">🥇</td>
+          <td>Ana Costa</td>
+          <td>7</td>
+          <td class="pts">2.450</td>
+        </tr>
+        <tr>
+          <td class="pos prata">🥈</td>
+          <td>Carlos Lima</td>
+          <td>5</td>
+          <td class="pts">1.980</td>
+        </tr>
+        <tr>
+          <td class="pos bronze">🥉</td>
+          <td>Marina Souza</td>
+          <td>5</td>
+          <td class="pts">1.870</td>
+        </tr>
+        <tr>
+          <td class="pos">4</td>
+          <td>Rafael Oliveira</td>
+          <td>4</td>
+          <td class="pts">1.520</td>
+        </tr>
+        <tr>
+          <td class="pos">5</td>
+          <td>Juliana Mendes</td>
+          <td>3</td>
+          <td class="pts">1.310</td>
+        </tr>
+        <tr>
+          <td class="pos">6</td>
+          <td>Pedro Santos</td>
+          <td>3</td>
+          <td class="pts">1.120</td>
+        </tr>
+        <tr>
+          <td class="pos">7</td>
+          <td>Lucia Ferreira</td>
+          <td>2</td>
+          <td class="pts">890</td>
+        </tr>
+        <tr>
+          <td class="pos">8</td>
+          <td>João Almeida</td>
+          <td>2</td>
+          <td class="pts">760</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="help" onclick="ajuda()">?</div>
+
+  </div>
+
+  <script>
+    function ajuda(){
+      alert("Ranking de usuários - EcoConecta");
+    }
+  </script>
+
+</body>
+</html>

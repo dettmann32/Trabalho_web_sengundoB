@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda - EcoConecta</title>
+  <link rel="stylesheet" href="../style/style.css">
+
+  <style>
+    .container{
+      height:640px;
+    }
+
+    .top{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      margin-top:5px;
+    }
+
+    .title{
+      margin-top:8px;
+      font-size:34px;
+      font-weight:bold;
+      color:#111;
+    }
+
+    .scroll-area{
+      overflow-y:auto;
+      max-height:430px;
+      margin-top:25px;
+      padding-right:5px;
+    }
+
+    .agenda-lista{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .evento{
+      display:flex;
+      gap:15px;
+      align-items:center;
+      background:#bde27d;
+      border-radius:12px;
+      padding:15px 20px;
+      transition:0.3s;
+    }
+
+    .evento:hover{
+      transform:translateX(4px);
+    }
+
+    .evento .data-box{
+      background:#26411b;
+      color:white;
+      border-radius:10px;
+      padding:8px 14px;
+      text-align:center;
+      min-width:55px;
+    }
+
+    .evento .data-box .dia{
+      font-size:20px;
+      font-weight:bold;
+      display:block;
+    }
+
+    .evento .data-box .mes{
+      font-size:10px;
+      text-transform:uppercase;
+    }
+
+    .evento .info{
+      flex:1;
+    }
+
+    .evento .info h3{
+      font-size:15px;
+      color:#1d4b2d;
+      margin-bottom:3px;
+    }
+
+    .evento .info p{
+      font-size:12px;
+      color:#26411b;
+    }
+
+    .evento .status{
+      font-size:11px;
+      font-weight:bold;
+      padding:4px 10px;
+      border-radius:12px;
+      white-space:nowrap;
+    }
+
+    .status.confirmado{
+      background:#62b356;
+      color:white;
+    }
+
+    .status.em-breve{
+      background:#8bab63;
+      color:#111;
+    }
+
+    @media(max-width:900px){
+      .evento{
+        flex-wrap:wrap;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <a class="back-btn" href="recicle.html">Voltar</a>
+
+    <div class="top">
+      <div class="logo">
+        <img src="../images/image.png" alt="EcoConecta">
+      </div>
+      <div class="title">Agenda</div>
+    </div>
+
+    <div class="scroll-area">
+    <div class="agenda-lista">
+
+      <div class="evento">
+        <div class="data-box">
+          <span class="dia">22</span>
+          <span class="mes">Mai</span>
+        </div>
+        <div class="info">
+          <h3>Mutirão de limpeza na praia</h3>
+          <p>Praia de Camburi - 8h às 12h</p>
+        </div>
+        <span class="status confirmado">Confirmado</span>
+      </div>
+
+      <div class="evento">
+        <div class="data-box">
+          <span class="dia">05</span>
+          <span class="mes">Jun</span>
+        </div>
+        <div class="info">
+          <h3>Feira de troca de livros</h3>
+          <p>Parque Municipal - 9h às 16h</p>
+        </div>
+        <span class="status confirmado">Confirmado</span>
+      </div>
+
+      <div class="evento">
+        <div class="data-box">
+          <span class="dia">15</span>
+          <span class="mes">Jun</span>
+        </div>
+        <div class="info">
+          <h3>Oficina de compostagem</h3>
+          <p>Centro de Educação Ambiental - 14h</p>
+        </div>
+        <span class="status confirmado">Confirmado</span>
+      </div>
+
+      <div class="evento">
+        <div class="data-box">
+          <span class="dia">28</span>
+          <span class="mes">Jun</span>
+        </div>
+        <div class="info">
+          <h3>Palestra "Oceanos sem Plástico"</h3>
+          <p>Auditório da UFES - 19h</p>
+        </div>
+        <span class="status em-breve">Em breve</span>
+      </div>
+
+      <div class="evento">
+        <div class="data-box">
+          <span class="dia">10</span>
+          <span class="mes">Jul</span>
+        </div>
+        <div class="info">
+          <h3>Drive-thru de recicláveis</h3>
+          <p>Estacionamento Shopping - 8h às 17h</p>
+        </div>
+        <span class="status em-breve">Em breve</span>
+      </div>
+
+    </div>
+    </div>
+
+    <div class="help" onclick="ajuda()">?</div>
+
+  </div>
+
+  <script>
+    function ajuda(){
+      alert("Agenda de eventos ecológicos - EcoConecta");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notícias - EcoConecta</title>
+  <link rel="stylesheet" href="../style/style.css">
+
+  <style>
+    .container{
+      height:640px;
+    }
+
+    .top{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      margin-top:5px;
+    }
+
+    .title{
+      margin-top:8px;
+      font-size:34px;
+      font-weight:bold;
+      color:#111;
+    }
+
+    .scroll-area{
+      overflow-y:auto;
+      max-height:430px;
+      margin-top:25px;
+      padding-right:5px;
+    }
+
+    .noticias-lista{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .noticia{
+      display:flex;
+      gap:15px;
+      background:#bde27d;
+      border-radius:12px;
+      padding:15px;
+      transition:0.3s;
+    }
+
+    .noticia:hover{
+      transform:translateX(4px);
+    }
+
+    .noticia .tag{
+      background:#26411b;
+      color:white;
+      font-size:10px;
+      padding:2px 8px;
+      border-radius:10px;
+      width:fit-content;
+      margin-bottom:6px;
+    }
+
+    .noticia .info h3{
+      font-size:15px;
+      color:#1d4b2d;
+      margin-bottom:4px;
+    }
+
+    .noticia .info p{
+      font-size:12px;
+      color:#26411b;
+      line-height:1.4;
+    }
+
+    .noticia .data{
+      font-size:11px;
+      color:#555;
+      white-space:nowrap;
+      margin-top:4px;
+    }
+
+    @media(max-width:900px){
+      .noticia{
+        flex-direction:column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <a class="back-btn" href="recicle.html">Voltar</a>
+
+    <div class="top">
+      <div class="logo">
+        <img src="../images/image.png" alt="EcoConecta">
+      </div>
+      <div class="title">Notícias</div>
+    </div>
+
+    <div class="scroll-area">
+    <div class="noticias-lista">
+
+      <div class="noticia">
+        <div class="info">
+          <div class="tag">Brasil</div>
+          <h3>Coleta seletiva cresce 25% nas capitais</h3>
+          <p>Programas municipais de reciclagem ampliaram atendimento para mais 3 milhões de pessoas.</p>
+          <div class="data">12 mai 2026</div>
+        </div>
+      </div>
+
+      <div class="noticia">
+        <div class="info">
+          <div class="tag">Tecnologia</div>
+          <h3>Aplicativo conecta recicladores a eventos</h3>
+          <p>Plataformas como a EcoConecta estão facilitando a logística reversa em grandes eventos.</p>
+          <div class="data">08 mai 2026</div>
+        </div>
+      </div>
+
+      <div class="noticia">
+        <div class="info">
+          <div class="tag">Mundo</div>
+          <h3>Acordo global reduz emissões de plástico</h3>
+          <p>Novo tratado internacional prevê corte de 40% na produção de plástico até 2030.</p>
+          <div class="data">03 mai 2026</div>
+        </div>
+      </div>
+
+      <div class="noticia">
+        <div class="info">
+          <div class="tag">ES</div>
+          <h3>Vitória ganha novo ponto de coleta</h3>
+          <p>Jardim Camburi recebe estação de reciclagem com capacidade para 2 toneladas/dia.</p>
+          <div class="data">28 abr 2026</div>
+        </div>
+      </div>
+
+      <div class="noticia">
+        <div class="info">
+          <div class="tag">Educação</div>
+          <h3>Escolas adotam disciplina de sustentabilidade</h3>
+          <p>Rede estadual inclui práticas de reciclagem e compostagem no currículo escolar.</p>
+          <div class="data">20 abr 2026</div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    <div class="help" onclick="ajuda()">?</div>
+
+  </div>
+
+  <script>
+    function ajuda(){
+      alert("Notícias ambientais - EcoConecta");
+    }
+  </script>
+
+</body>
+</html>
