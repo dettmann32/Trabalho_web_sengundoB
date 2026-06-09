@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooperativas - EcoConecta</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+    <header class="topo-site">
+        <div class="container topo-cooperativas">
+            <div class="marca-site">
+                <img src="../images/image.png" alt="Logo EcoConecta">
+                <h1>EcoConecta</h1>
+            </div>
+
+            <div class="menu-dropdown-area">
+                <button class="botao-menu" id="botaoMenu" type="button">Menu</button>
+
+                <nav class="menu-dropdown" id="menuDropdown">
+                    <a href="recicle.html">Início</a>
+                    <a href="perfil.html">Perfil</a>
+                    <a href="mapa.html">Mapa</a>
+                    <a href="selos.html">Selos</a>
+                    <a href="impacto.html">Impacto</a>
+                    <a href="dicas.html">Dicas</a>
+                    <a href="cooperativas.html" class="ativo">Cooperativas</a>
+                    <a href="desafios.html">Desafios</a>
+                    <a href="ranking.html">Ranking</a>
+                    <a href="noticias.html">Notícias</a>
+                    <a href="agenda.html">Agenda</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="cooperativas-pagina">
+        <section class="container cooperativas-hero">
+            <div class="cooperativas-texto">
+                <span class="cooperativas-etiqueta">Parceiras</span>
+                <h2>Cooperativas e pontos de apoio para reciclagem</h2>
+                <p>
+                    Conheça algumas cooperativas parceiras e veja onde encontrar apoio
+                    para descarte correto, coleta seletiva e reaproveitamento de materiais.
+                </p>
+            </div>
+        </section>
+
+        <section class="container coop-grid">
+            <article class="coop-card">
+                <div class="icone">♻️</div>
+                <h3>Recicla Vila</h3>
+                <p>Vila Velha - ES</p>
+                <span>Coleta de papel, plástico e metal.</span>
+            </article>
+
+            <article class="coop-card">
+                <div class="icone">🌿</div>
+                <h3>Verde Vida</h3>
+                <p>Vitória - ES</p>
+                <span>Foco em orgânicos e compostagem.</span>
+            </article>
+
+            <article class="coop-card">
+                <div class="icone">📦</div>
+                <h3>EcoPapel</h3>
+                <p>Serra - ES</p>
+                <span>Reciclagem de papel e papelão.</span>
+            </article>
+
+            <article class="coop-card">
+                <div class="icone">🪴</div>
+                <h3>Jardim Reciclado</h3>
+                <p>Cariacica - ES</p>
+                <span>Resíduos verdes e jardinagem.</span>
+            </article>
+
+            <article class="coop-card">
+                <div class="icone">🔩</div>
+                <h3>Metal Novo</h3>
+                <p>Vila Velha - ES</p>
+                <span>Sucata metálica e eletrônicos.</span>
+            </article>
+
+            <article class="coop-card">
+                <div class="icone">🧪</div>
+                <h3>Química Verde</h3>
+                <p>Vitória - ES</p>
+                <span>Resíduos químicos e óleo de cozinha.</span>
+            </article>
+        </section>
+    </main>
+
+    <footer class="rodape-site">
+        <p>EcoConecta - Projeto acadêmico de desenvolvimento web</p>
+    </footer>
+
+    <script>
+        const botaoMenu = document.getElementById("botaoMenu");
+        const menuDropdown = document.getElementById("menuDropdown");
+
+        botaoMenu.addEventListener("click", function () {
+            menuDropdown.classList.toggle("aberto");
+        });
+
+        document.addEventListener("click", function (evento) {
+            const clicouDentroMenu = menuDropdown.contains(evento.target);
+            const clicouNoBotao = botaoMenu.contains(evento.target);
+
+            if (!clicouDentroMenu && !clicouNoBotao) {
+                menuDropdown.classList.remove("aberto");
+            }
+        });
+    </script>
+
+</body>
+</html>

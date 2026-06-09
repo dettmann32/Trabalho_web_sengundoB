@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - EcoConecta</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+    <header class="topo-site">
+        <div class="container topo-agenda">
+            <div class="marca-site">
+                <img src="../images/image.png" alt="Logo EcoConecta">
+                <h1>EcoConecta</h1>
+            </div>
+
+            <div class="menu-dropdown-area">
+                <button class="botao-menu" id="botaoMenu" type="button">Menu</button>
+
+                <nav class="menu-dropdown" id="menuDropdown">
+                    <a href="recicle.html">Início</a>
+                    <a href="perfil.html">Perfil</a>
+                    <a href="mapa.html">Mapa</a>
+                    <a href="selos.html">Selos</a>
+                    <a href="impacto.html">Impacto</a>
+                    <a href="dicas.html">Dicas</a>
+                    <a href="cooperativas.html">Cooperativas</a>
+                    <a href="desafios.html">Desafios</a>
+                    <a href="ranking.html">Ranking</a>
+                    <a href="noticias.html">Notícias</a>
+                    <a href="agenda.html" class="ativo">Agenda</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="agenda-pagina">
+        <section class="container agenda-hero">
+            <div class="agenda-texto">
+                <span class="agenda-etiqueta">Eventos</span>
+                <h2>Agenda de ações ecológicas e atividades sustentáveis</h2>
+                <p>
+                    Acompanhe os próximos eventos relacionados à educação ambiental,
+                    reciclagem, mutirões e ações comunitárias promovidas pelo EcoConecta.
+                </p>
+            </div>
+        </section>
+
+        <section class="container agenda-lista">
+            <article class="evento-card">
+                <div class="data-box">
+                    <span class="dia">22</span>
+                    <span class="mes">Mai</span>
+                </div>
+                <div class="evento-info">
+                    <h3>Mutirão de limpeza na praia</h3>
+                    <p>Praia de Camburi - 8h às 12h</p>
+                </div>
+                <span class="status confirmado">Confirmado</span>
+            </article>
+
+            <article class="evento-card">
+                <div class="data-box">
+                    <span class="dia">05</span>
+                    <span class="mes">Jun</span>
+                </div>
+                <div class="evento-info">
+                    <h3>Feira de troca de livros</h3>
+                    <p>Parque Municipal - 9h às 16h</p>
+                </div>
+                <span class="status confirmado">Confirmado</span>
+            </article>
+
+            <article class="evento-card">
+                <div class="data-box">
+                    <span class="dia">15</span>
+                    <span class="mes">Jun</span>
+                </div>
+                <div class="evento-info">
+                    <h3>Oficina de compostagem</h3>
+                    <p>Centro de Educação Ambiental - 14h</p>
+                </div>
+                <span class="status confirmado">Confirmado</span>
+            </article>
+
+            <article class="evento-card">
+                <div class="data-box">
+                    <span class="dia">28</span>
+                    <span class="mes">Jun</span>
+                </div>
+                <div class="evento-info">
+                    <h3>Palestra "Oceanos sem Plástico"</h3>
+                    <p>Auditório da UFES - 19h</p>
+                </div>
+                <span class="status em-breve">Em breve</span>
+            </article>
+
+            <article class="evento-card">
+                <div class="data-box">
+                    <span class="dia">10</span>
+                    <span class="mes">Jul</span>
+                </div>
+                <div class="evento-info">
+                    <h3>Drive-thru de recicláveis</h3>
+                    <p>Estacionamento do shopping - 8h às 17h</p>
+                </div>
+                <span class="status em-breve">Em breve</span>
+            </article>
+        </section>
+    </main>
+
+    <footer class="rodape-site">
+        <p>EcoConecta - Projeto acadêmico de desenvolvimento web</p>
+    </footer>
+
+    <script>
+        const botaoMenu = document.getElementById("botaoMenu");
+        const menuDropdown = document.getElementById("menuDropdown");
+
+        botaoMenu.addEventListener("click", function () {
+            menuDropdown.classList.toggle("aberto");
+        });
+
+        document.addEventListener("click", function (evento) {
+            const clicouDentroMenu = menuDropdown.contains(evento.target);
+            const clicouNoBotao = botaoMenu.contains(evento.target);
+
+            if (!clicouDentroMenu && !clicouNoBotao) {
+                menuDropdown.classList.remove("aberto");
+            }
+        });
+    </script>
+
+</body>
+</html>

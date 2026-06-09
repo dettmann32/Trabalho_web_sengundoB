@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias - EcoConecta</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+    <header class="topo-site">
+        <div class="container topo-noticias">
+            <div class="marca-site">
+                <img src="../images/image.png" alt="Logo EcoConecta">
+                <h1>EcoConecta</h1>
+            </div>
+
+            <div class="menu-dropdown-area">
+                <button class="botao-menu" id="botaoMenu" type="button">Menu</button>
+
+                <nav class="menu-dropdown" id="menuDropdown">
+                    <a href="recicle.html">Início</a>
+                    <a href="perfil.html">Perfil</a>
+                    <a href="mapa.html">Mapa</a>
+                    <a href="selos.html">Selos</a>
+                    <a href="impacto.html">Impacto</a>
+                    <a href="dicas.html">Dicas</a>
+                    <a href="cooperativas.html">Cooperativas</a>
+                    <a href="desafios.html">Desafios</a>
+                    <a href="ranking.html">Ranking</a>
+                    <a href="noticias.html" class="ativo">Notícias</a>
+                    <a href="agenda.html">Agenda</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="noticias-pagina">
+        <section class="container noticias-hero">
+            <div class="noticias-texto">
+                <span class="noticias-etiqueta">Atualizações</span>
+                <h2>Notícias sobre sustentabilidade e reciclagem</h2>
+                <p>
+                    Acompanhe informações recentes relacionadas à coleta seletiva, educação ambiental,
+                    inovação sustentável e ações locais ligadas ao tema da reciclagem.
+                </p>
+            </div>
+        </section>
+
+        <section class="container noticias-lista">
+            <article class="noticia-card">
+                <div class="tag">Brasil</div>
+                <h3>Coleta seletiva cresce 25% nas capitais</h3>
+                <p>Programas municipais de reciclagem ampliaram atendimento para mais 3 milhões de pessoas.</p>
+                <span class="data">12 mai 2026</span>
+            </article>
+
+            <article class="noticia-card">
+                <div class="tag">Tecnologia</div>
+                <h3>Aplicativo conecta recicladores a eventos</h3>
+                <p>Plataformas como a EcoConecta estão facilitando a logística reversa em grandes eventos.</p>
+                <span class="data">08 mai 2026</span>
+            </article>
+
+            <article class="noticia-card">
+                <div class="tag">Mundo</div>
+                <h3>Acordo global reduz emissões de plástico</h3>
+                <p>Novo tratado internacional prevê corte de 40% na produção de plástico até 2030.</p>
+                <span class="data">03 mai 2026</span>
+            </article>
+
+            <article class="noticia-card">
+                <div class="tag">ES</div>
+                <h3>Vitória ganha novo ponto de coleta</h3>
+                <p>Jardim Camburi recebe estação de reciclagem com capacidade para 2 toneladas por dia.</p>
+                <span class="data">28 abr 2026</span>
+            </article>
+
+            <article class="noticia-card">
+                <div class="tag">Educação</div>
+                <h3>Escolas adotam disciplina de sustentabilidade</h3>
+                <p>Rede estadual inclui práticas de reciclagem e compostagem no currículo escolar.</p>
+                <span class="data">20 abr 2026</span>
+            </article>
+        </section>
+    </main>
+
+    <footer class="rodape-site">
+        <p>EcoConecta - Projeto acadêmico de desenvolvimento web</p>
+    </footer>
+
+    <script>
+        const botaoMenu = document.getElementById("botaoMenu");
+        const menuDropdown = document.getElementById("menuDropdown");
+
+        botaoMenu.addEventListener("click", function () {
+            menuDropdown.classList.toggle("aberto");
+        });
+
+        document.addEventListener("click", function (evento) {
+            const clicouDentroMenu = menuDropdown.contains(evento.target);
+            const clicouNoBotao = botaoMenu.contains(evento.target);
+
+            if (!clicouDentroMenu && !clicouNoBotao) {
+                menuDropdown.classList.remove("aberto");
+            }
+        });
+    </script>
+
+</body>
+</html>

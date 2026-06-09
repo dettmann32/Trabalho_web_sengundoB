@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafios - EcoConecta</title>
+  <link rel="stylesheet" href="../style/style.css">
+
+  <style>
+    .container{
+      height:640px;
+    }
+
+    .top{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      margin-top:5px;
+    }
+
+    .title{
+      margin-top:8px;
+      font-size:34px;
+      font-weight:bold;
+      color:#111;
+    }
+
+    .desafios-lista{
+      margin-top:50px;
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    .desafio{
+      display:flex;
+      align-items:center;
+      gap:15px;
+      background:#bde27d;
+      border-radius:12px;
+      padding:15px 20px;
+      transition:0.3s;
+    }
+
+    .desafio:hover{
+      transform:translateX(5px);
+    }
+
+    .desafio .icone{
+      font-size:30px;
+      min-width:45px;
+      text-align:center;
+    }
+
+    .desafio .info{
+      flex:1;
+    }
+
+    .desafio .info h3{
+      font-size:15px;
+      color:#1d4b2d;
+      margin-bottom:3px;
+    }
+
+    .desafio .info p{
+      font-size:12px;
+      color:#26411b;
+    }
+
+    .desafio .pts{
+      background:#26411b;
+      color:white;
+      padding:4px 12px;
+      border-radius:20px;
+      font-size:12px;
+      font-weight:bold;
+      white-space:nowrap;
+    }
+
+    @media(max-width:900px){
+      .desafio{
+        flex-wrap:wrap;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <a class="back-btn" href="recicle.html">Voltar</a>
+
+    <div class="top">
+      <div class="logo">
+        <img src="../images/image.png" alt="EcoConecta">
+      </div>
+      <div class="title">Desafios</div>
+    </div>
+
+    <div class="desafios-lista">
+
+      <div class="desafio">
+        <div class="icone">♻️</div>
+        <div class="info">
+          <h3>Recicle 10kg em um mês</h3>
+          <p>Separe e descarte corretamente 10kg de materiais recicláveis.</p>
+        </div>
+        <div class="pts">+100 pts</div>
+      </div>
+
+      <div class="desafio">
+        <div class="icone">🚲</div>
+        <div class="info">
+          <h3>5 dias sem carro</h3>
+          <p>Use transporte sustentável por 5 dias consecutivos.</p>
+        </div>
+        <div class="pts">+80 pts</div>
+      </div>
+
+      <div class="desafio">
+        <div class="icone">💡</div>
+        <div class="info">
+          <h3>Economize 20% de energia</h3>
+          <p>Reduza seu consumo elétrico em 20% comparado ao mês anterior.</p>
+        </div>
+        <div class="pts">+120 pts</div>
+      </div>
+
+      <div class="desafio">
+        <div class="icone">🌱</div>
+        <div class="info">
+          <h3>Plante uma árvore</h3>
+          <p>Plante e cuide de uma muda por pelo menos 30 dias.</p>
+        </div>
+        <div class="pts">+200 pts</div>
+      </div>
+
+      <div class="desafio">
+        <div class="icone">📚</div>
+        <div class="info">
+          <h3>Compartilhe 3 dicas</h3>
+          <p>Compartilhe dicas sustentáveis com amigos e familiares.</p>
+        </div>
+        <div class="pts">+50 pts</div>
+      </div>
+
+    </div>
+
+    <div class="help" onclick="ajuda()">?</div>
+
+  </div>
+
+  <script>
+    function ajuda(){
+      alert("Desafios ecológicos - EcoConecta");
+    }
+  </script>
+
+</body>
+</html>

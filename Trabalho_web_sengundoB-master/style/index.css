@@ -1,0 +1,259 @@
+.pagina-login {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef5ec 0%, #dce8d5 100%);
+}
+
+.login-pagina {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 1100px;
+  min-height: 640px;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--sombra-media);
+  border: 1px solid #dde7d9;
+}
+
+.login-conteudo {
+  width: 50%;
+  padding: 60px 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #ffffff;
+}
+
+.login-topo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.login-logo {
+  width: 82px;
+  height: 82px;
+  padding: 14px;
+  border-radius: 20px;
+  background-color: #f4faef;
+  border: 1px solid #dce8d3;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.login-marca {
+  max-width: 360px;
+}
+
+.login-marca h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #234b2c;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.login-marca p {
+  font-size: 15px;
+  color: #647067;
+  line-height: 1.7;
+}
+
+.login-texto {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.login-texto h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1f2a21;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.login-texto p {
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.7;
+  max-width: 420px;
+}
+
+.login-formulario {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.login-formulario .campo-formulario {
+  margin-bottom: 10px;
+}
+
+.botao-principal {
+  margin-top: 10px;
+}
+
+.login-acoes {
+  width: 100%;
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.link-login {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2f6f85;
+  transition: var(--transicao);
+}
+
+.link-login:hover {
+  color: #1f5161;
+  text-decoration: underline;
+}
+
+.botao-link {
+  border: none;
+  background: none;
+  color: var(--cor-primaria);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+.botao-link:hover {
+  color: var(--cor-primaria-escura);
+  text-decoration: underline;
+}
+
+.mensagem-login {
+  margin-top: 18px;
+}
+
+.login-imagem-area {
+  width: 50%;
+  position: relative;
+  background: url("../images/mundo.png") center center / cover no-repeat;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.login-imagem-sombra {
+  width: 100%;
+  min-height: 100%;
+  background: linear-gradient(to top, rgba(22, 48, 27, 0.82), rgba(22, 48, 27, 0.20));
+  display: flex;
+  align-items: flex-end;
+  padding: 44px;
+}
+
+.login-imagem-texto {
+  max-width: 390px;
+}
+
+.login-imagem-texto h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.login-imagem-texto p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.90);
+}
+
+@media (max-width: 960px) {
+  .login-card {
+      flex-direction: column;
+      min-height: auto;
+  }
+
+  .login-conteudo,
+  .login-imagem-area {
+      width: 100%;
+  }
+
+  .login-conteudo {
+      padding: 40px 30px;
+  }
+
+  .login-formulario {
+      max-width: 100%;
+  }
+
+  .login-imagem-area {
+      min-height: 320px;
+  }
+
+  .login-imagem-sombra {
+      padding: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-pagina {
+      padding: 18px;
+  }
+
+  .login-card {
+      border-radius: 20px;
+  }
+
+  .login-conteudo {
+      padding: 28px 20px;
+  }
+
+  .login-topo {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 28px;
+  }
+
+  .login-marca h1 {
+      font-size: 28px;
+  }
+
+  .login-texto h2 {
+      font-size: 25px;
+  }
+
+  .login-texto p,
+  .login-marca p,
+  .login-imagem-texto p {
+      font-size: 14px;
+  }
+
+  .login-imagem-area {
+      min-height: 240px;
+  }
+
+  .login-imagem-texto h2 {
+      font-size: 24px;
+  }
+
+  .login-acoes {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}

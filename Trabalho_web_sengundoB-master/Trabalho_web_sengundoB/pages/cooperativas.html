@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cooperativas - EcoConecta</title>
+  <link rel="stylesheet" href="../style/style.css">
+
+  <style>
+    .container{
+      height:640px;
+    }
+
+    .top{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      margin-top:5px;
+    }
+
+    .title{
+      margin-top:8px;
+      font-size:34px;
+      font-weight:bold;
+      color:#111;
+    }
+
+    .coop-grid{
+      margin-top:50px;
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:25px;
+    }
+
+    .coop-card{
+      background:#8cab63;
+      border-radius:14px;
+      padding:20px;
+      text-align:center;
+      transition:0.3s;
+      box-shadow:0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .coop-card:hover{
+      transform:translateY(-4px);
+    }
+
+    .coop-card .icone{
+      font-size:36px;
+      margin-bottom:10px;
+    }
+
+    .coop-card h3{
+      font-size:16px;
+      color:#111;
+      margin-bottom:6px;
+    }
+
+    .coop-card p{
+      font-size:12px;
+      color:#26411b;
+      line-height:1.4;
+    }
+
+    @media(max-width:900px){
+      .coop-grid{
+        grid-template-columns:repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <a class="back-btn" href="recicle.html">Voltar</a>
+
+    <div class="top">
+      <div class="logo">
+        <img src="../images/image.png" alt="EcoConecta">
+      </div>
+      <div class="title">Cooperativas</div>
+    </div>
+
+    <div class="coop-grid">
+
+      <div class="coop-card">
+        <div class="icone">♻️</div>
+        <h3>Recicla Vila</h3>
+        <p>Vila Velha - ES<br>Coleta de papel, plástico e metal.</p>
+      </div>
+
+      <div class="coop-card">
+        <div class="icone">🌿</div>
+        <h3>Verde Vida</h3>
+        <p>Vitória - ES<br>Foco em orgânicos e compostagem.</p>
+      </div>
+
+      <div class="coop-card">
+        <div class="icone">📦</div>
+        <h3>EcoPapel</h3>
+        <p>Serra - ES<br>Reciclagem de papel e papelão.</p>
+      </div>
+
+      <div class="coop-card">
+        <div class="icone">🪴</div>
+        <h3>Jardim Reciclado</h3>
+        <p>Cariacica - ES<br>Resíduos verdes e jardinagem.</p>
+      </div>
+
+      <div class="coop-card">
+        <div class="icone">🔩</div>
+        <h3>Metal Novo</h3>
+        <p>Vila Velha - ES<br>Sucata metálica e eletrônicos.</p>
+      </div>
+
+      <div class="coop-card">
+        <div class="icone">🧪</div>
+        <h3>Química Verde</h3>
+        <p>Vitória - ES<br>Resíduos químicos e óleo de cozinha.</p>
+      </div>
+
+    </div>
+
+    <div class="help" onclick="ajuda()">?</div>
+
+  </div>
+
+  <script>
+    function ajuda(){
+      alert("Cooperativas parceiras - EcoConecta");
+    }
+  </script>
+
+</body>
+</html>

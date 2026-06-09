@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa - EcoConecta</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+    <header class="topo-site">
+        <div class="container topo-mapa">
+            <div class="marca-site">
+                <img src="../images/image.png" alt="Logo EcoConecta">
+                <h1>EcoConecta</h1>
+            </div>
+
+            <div class="menu-dropdown-area">
+                <button class="botao-menu" id="botaoMenu" type="button">Menu</button>
+
+                <nav class="menu-dropdown" id="menuDropdown">
+                    <a href="recicle.html">Início</a>
+                    <a href="perfil.html">Perfil</a>
+                    <a href="mapa.html" class="ativo">Mapa</a>
+                    <a href="selos.html">Selos</a>
+                    <a href="impacto.html">Impacto</a>
+                    <a href="dicas.html">Dicas</a>
+                    <a href="cooperativas.html">Cooperativas</a>
+                    <a href="desafios.html">Desafios</a>
+                    <a href="ranking.html">Ranking</a>
+                    <a href="noticias.html">Notícias</a>
+                    <a href="agenda.html">Agenda</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="mapa-pagina">
+        <section class="container mapa-hero">
+            <div class="mapa-texto">
+                <span class="mapa-etiqueta">Localização</span>
+                <h2>Ponto de referência em Jardim Camburi</h2>
+                <p>
+                    Visualize a região de Jardim Camburi, em Vitória/ES, para facilitar a navegação,
+                    a localização de ações ambientais e a consulta de pontos de apoio relacionados ao projeto.
+                </p>
+
+                <div class="mapa-info">
+                    <div class="mapa-item">
+                        <span class="mapa-label">Região</span>
+                        <strong>Jardim Camburi</strong>
+                    </div>
+
+                    <div class="mapa-item">
+                        <span class="mapa-label">Cidade</span>
+                        <strong>Vitória - ES</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mapa-card">
+                <div class="mapa-frame">
+                    <iframe
+                        src="https://www.google.com/maps?q=Jardim+Camburi+Vitória+ES&output=embed"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de Jardim Camburi em Vitória ES">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mapa-blocos">
+            <article class="card mapa-box">
+                <h3>Como usar o mapa</h3>
+                <p>
+                    Utilize o mapa para identificar a localização da área exibida e apoiar a navegação
+                    entre pontos de interesse relacionados ao EcoConecta.
+                </p>
+            </article>
+
+            <article class="card mapa-box">
+                <h3>Objetivo da página</h3>
+                <p>
+                    Esta página centraliza a visualização geográfica de uma área importante do projeto,
+                    tornando o acesso mais rápido e mais claro para o usuário.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="rodape-site">
+        <p>EcoConecta - Projeto acadêmico de desenvolvimento web</p>
+    </footer>
+
+    <script>
+        const botaoMenu = document.getElementById("botaoMenu");
+        const menuDropdown = document.getElementById("menuDropdown");
+
+        botaoMenu.addEventListener("click", function () {
+            menuDropdown.classList.toggle("aberto");
+        });
+
+        document.addEventListener("click", function (evento) {
+            const clicouDentroMenu = menuDropdown.contains(evento.target);
+            const clicouNoBotao = botaoMenu.contains(evento.target);
+
+            if (!clicouDentroMenu && !clicouNoBotao) {
+                menuDropdown.classList.remove("aberto");
+            }
+        });
+    </script>
+
+</body>
+</html>
