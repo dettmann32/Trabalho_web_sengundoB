@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impacto - EcoConecta</title>
+  <link rel="stylesheet" href="../style/style.css">
+
+  <style>
+    .container{
+      height:640px;
+    }
+
+    .top{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      margin-top:5px;
+    }
+
+    .title{
+      margin-top:8px;
+      font-size:34px;
+      font-weight:bold;
+      color:#111;
+    }
+
+    .cards{
+      margin-top:90px;
+      display:flex;
+      justify-content:space-between;
+      gap:25px;
+      flex-wrap:wrap;
+    }
+
+    .card{
+      width:290px;
+      min-height:230px;
+      background:#8cab63;
+      border-radius:18px;
+      padding:22px;
+      color:#111;
+      box-shadow:0 4px 10px rgba(0,0,0,0.15);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card h2{
+      font-size:20px;
+      margin-bottom:18px;
+    }
+
+    .card ul{
+      padding-left:18px;
+    }
+
+    .card li{
+      margin-bottom:12px;
+      line-height:1.4;
+      font-size:16px;
+    }
+
+    @media(max-width:950px){
+      .cards{
+        justify-content:center;
+      }
+
+      .card{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <a class="back-btn" href="recicle.html">
+      Voltar
+    </a>
+
+    <div class="top">
+
+      <div class="logo">
+        <img src="../images/image.png" alt="EcoConecta">
+      </div>
+
+      <div class="title">
+        Impacto
+      </div>
+
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+
+        <h2>♻️ Materiais Reciclados</h2>
+
+        <ul>
+          <li>🌱 12.480 kg de materiais reciclados</li>
+          <li>🥤 Equivale a 832 mil garrafas PET retiradas do meio ambiente</li>
+          <li>🧱 O suficiente para construir 52 casas populares com tijolos ecológicos</li>
+        </ul>
+
+      </div>
+
+      <div class="card">
+
+        <h2>🌍 Redução de Impacto</h2>
+
+        <ul>
+          <li>☁️ 22,5 toneladas de CO₂ evitadas</li>
+          <li>🌳 Equivale ao trabalho de 1.800 árvores plantadas</li>
+          <li>💧 137 mil litros de água poupados (comparado à produção com materiais virgens)</li>
+        </ul>
+
+      </div>
+
+      <div class="card">
+
+        <h2>📊 Engajamento da Comunidade</h2>
+
+        <ul>
+          <li>🏅 Usuários ativos: 1.270</li>
+          <li>📍 Cidades impactadas: 4</li>
+          <li>⭐ Pontos cadastrados: 185</li>
+          <li>💡 Dicas sustentáveis lidas: 3.420</li>
+          <li>♻️ Ações de reutilização completadas: 290</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="help" onclick="ajuda()">
+      ?
+    </div>
+
+  </div>
+
+  <script>
+    function ajuda(){
+      alert("Página de impacto ambiental EcoConecta");
+    }
+  </script>
+
+</body>
+</html>

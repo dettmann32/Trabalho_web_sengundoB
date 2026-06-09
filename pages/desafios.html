@@ -1,161 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desafios - EcoConecta</title>
-  <link rel="stylesheet" href="../style/style.css">
-
-  <style>
-    .container{
-      height:640px;
-    }
-
-    .top{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      margin-top:5px;
-    }
-
-    .title{
-      margin-top:8px;
-      font-size:34px;
-      font-weight:bold;
-      color:#111;
-    }
-
-    .desafios-lista{
-      margin-top:50px;
-      display:flex;
-      flex-direction:column;
-      gap:15px;
-    }
-
-    .desafio{
-      display:flex;
-      align-items:center;
-      gap:15px;
-      background:#bde27d;
-      border-radius:12px;
-      padding:15px 20px;
-      transition:0.3s;
-    }
-
-    .desafio:hover{
-      transform:translateX(5px);
-    }
-
-    .desafio .icone{
-      font-size:30px;
-      min-width:45px;
-      text-align:center;
-    }
-
-    .desafio .info{
-      flex:1;
-    }
-
-    .desafio .info h3{
-      font-size:15px;
-      color:#1d4b2d;
-      margin-bottom:3px;
-    }
-
-    .desafio .info p{
-      font-size:12px;
-      color:#26411b;
-    }
-
-    .desafio .pts{
-      background:#26411b;
-      color:white;
-      padding:4px 12px;
-      border-radius:20px;
-      font-size:12px;
-      font-weight:bold;
-      white-space:nowrap;
-    }
-
-    @media(max-width:900px){
-      .desafio{
-        flex-wrap:wrap;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios - EcoConecta</title>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
-
 <body>
 
-  <div class="container">
+    <header class="topo-site">
+        <div class="container topo-desafios">
+            <div class="marca-site">
+                <img src="../images/image.png" alt="Logo EcoConecta">
+                <h1>EcoConecta</h1>
+            </div>
 
-    <a class="back-btn" href="recicle.html">Voltar</a>
+            <div class="menu-dropdown-area">
+                <button class="botao-menu" id="botaoMenu" type="button">Menu</button>
 
-    <div class="top">
-      <div class="logo">
-        <img src="../images/image.png" alt="EcoConecta">
-      </div>
-      <div class="title">Desafios</div>
-    </div>
-
-    <div class="desafios-lista">
-
-      <div class="desafio">
-        <div class="icone">♻️</div>
-        <div class="info">
-          <h3>Recicle 10kg em um mês</h3>
-          <p>Separe e descarte corretamente 10kg de materiais recicláveis.</p>
+                <nav class="menu-dropdown" id="menuDropdown">
+                    <a href="recicle.html">Início</a>
+                    <a href="perfil.html">Perfil</a>
+                    <a href="mapa.html">Mapa</a>
+                    <a href="selos.html">Selos</a>
+                    <a href="impacto.html">Impacto</a>
+                    <a href="dicas.html">Dicas</a>
+                    <a href="cooperativas.html">Cooperativas</a>
+                    <a href="desafios.html" class="ativo">Desafios</a>
+                    <a href="ranking.html">Ranking</a>
+                    <a href="noticias.html">Notícias</a>
+                    <a href="agenda.html">Agenda</a>
+                </nav>
+            </div>
         </div>
-        <div class="pts">+100 pts</div>
-      </div>
+    </header>
 
-      <div class="desafio">
-        <div class="icone">🚲</div>
-        <div class="info">
-          <h3>5 dias sem carro</h3>
-          <p>Use transporte sustentável por 5 dias consecutivos.</p>
-        </div>
-        <div class="pts">+80 pts</div>
-      </div>
+    <main class="desafios-pagina">
+        <section class="container desafios-hero">
+            <div class="desafios-texto">
+                <span class="desafios-etiqueta">Missões</span>
+                <h2>Desafios ecológicos para incentivar hábitos sustentáveis</h2>
+                <p>
+                    Participe de desafios, acumule pontos e transforme pequenas atitudes
+                    em ações com impacto positivo para o meio ambiente.
+                </p>
+            </div>
+        </section>
 
-      <div class="desafio">
-        <div class="icone">💡</div>
-        <div class="info">
-          <h3>Economize 20% de energia</h3>
-          <p>Reduza seu consumo elétrico em 20% comparado ao mês anterior.</p>
-        </div>
-        <div class="pts">+120 pts</div>
-      </div>
+        <section class="container desafios-lista">
+            <article class="desafio-card">
+                <div class="icone">♻️</div>
+                <div class="info">
+                    <h3>Recicle 10kg em um mês</h3>
+                    <p>Separe e descarte corretamente 10kg de materiais recicláveis.</p>
+                </div>
+                <span class="pts">+100 pts</span>
+            </article>
 
-      <div class="desafio">
-        <div class="icone">🌱</div>
-        <div class="info">
-          <h3>Plante uma árvore</h3>
-          <p>Plante e cuide de uma muda por pelo menos 30 dias.</p>
-        </div>
-        <div class="pts">+200 pts</div>
-      </div>
+            <article class="desafio-card">
+                <div class="icone">🚲</div>
+                <div class="info">
+                    <h3>5 dias sem carro</h3>
+                    <p>Use transporte sustentável por 5 dias consecutivos.</p>
+                </div>
+                <span class="pts">+80 pts</span>
+            </article>
 
-      <div class="desafio">
-        <div class="icone">📚</div>
-        <div class="info">
-          <h3>Compartilhe 3 dicas</h3>
-          <p>Compartilhe dicas sustentáveis com amigos e familiares.</p>
-        </div>
-        <div class="pts">+50 pts</div>
-      </div>
+            <article class="desafio-card">
+                <div class="icone">💡</div>
+                <div class="info">
+                    <h3>Economize 20% de energia</h3>
+                    <p>Reduza o consumo elétrico em comparação ao mês anterior.</p>
+                </div>
+                <span class="pts">+120 pts</span>
+            </article>
 
-    </div>
+            <article class="desafio-card">
+                <div class="icone">🌱</div>
+                <div class="info">
+                    <h3>Plante uma árvore</h3>
+                    <p>Plante e acompanhe o crescimento de uma muda por pelo menos 30 dias.</p>
+                </div>
+                <span class="pts">+200 pts</span>
+            </article>
 
-    <div class="help" onclick="ajuda()">?</div>
+            <article class="desafio-card">
+                <div class="icone">📚</div>
+                <div class="info">
+                    <h3>Compartilhe 3 dicas</h3>
+                    <p>Divulgue práticas sustentáveis com amigos, colegas ou familiares.</p>
+                </div>
+                <span class="pts">+50 pts</span>
+            </article>
+        </section>
+    </main>
 
-  </div>
+    <footer class="rodape-site">
+        <p>EcoConecta - Projeto acadêmico de desenvolvimento web</p>
+    </footer>
 
-  <script>
-    function ajuda(){
-      alert("Desafios ecológicos - EcoConecta");
-    }
-  </script>
+    <script>
+        const botaoMenu = document.getElementById("botaoMenu");
+        const menuDropdown = document.getElementById("menuDropdown");
+
+        botaoMenu.addEventListener("click", function () {
+            menuDropdown.classList.toggle("aberto");
+        });
+
+        document.addEventListener("click", function (evento) {
+            const clicouDentroMenu = menuDropdown.contains(evento.target);
+            const clicouNoBotao = botaoMenu.contains(evento.target);
+
+            if (!clicouDentroMenu && !clicouNoBotao) {
+                menuDropdown.classList.remove("aberto");
+            }
+        });
+    </script>
 
 </body>
 </html>

@@ -3,198 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redefinir Senha - EcoConecta</title>
+    <title>EcoConecta - Redefinir Senha</title>
     <link rel="stylesheet" href="../style/style.css">
-
-    <style>
-        body{
-            background:#d9ebbf;
-        }
-
-        .container{
-            width:1000px;
-            height:600px;
-            display:flex;
-            background:#cfe7aa;
-            overflow:hidden;
-            padding:0;
-        }
-
-        .left{
-            width:45%;
-            padding:40px;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-        }
-
-        .logo{
-            margin-top:10px;
-            text-align:center;
-        }
-
-        .logo img{
-            width:90px;
-        }
-
-        .logo h2{
-            margin-top:10px;
-            font-size:18px;
-            color:#000;
-        }
-
-        .form{
-            width:100%;
-            margin-top:100px;
-        }
-
-        .form-group{
-            margin-bottom:30px;
-        }
-
-        .form-group label{
-            display:block;
-            margin-bottom:8px;
-            font-size:18px;
-        }
-
-        .form-group input{
-            width:100%;
-            height:40px;
-            border:none;
-            border-radius:5px;
-            background:#8fb66e;
-            padding:10px;
-            font-size:16px;
-            outline:none;
-        }
-
-        .btn{
-            width:140px;
-            height:45px;
-            border:none;
-            border-radius:25px;
-            background:white;
-            cursor:pointer;
-            font-weight:bold;
-            transition:0.3s;
-            display:block;
-            margin:0 auto;
-        }
-
-        .btn:hover{
-            background:#e8e8e8;
-            transform:scale(1.03);
-        }
-
-        .right{
-            width:55%;
-        }
-
-        .right img{
-            width:100%;
-            height:100%;
-            object-fit:cover;
-        }
-
-        @media(max-width:900px){
-            .container{
-                flex-direction:column;
-                width:95%;
-                height:auto;
-            }
-
-            .left,
-            .right{
-                width:100%;
-            }
-
-            .right{
-                height:300px;
-            }
-
-            .form{
-                margin-top:50px;
-            }
-        }
-    </style>
 </head>
-<body>
+<body class="pagina-redefinir">
 
-    <div class="container">
-
-        <div class="left">
-
-            <div class="logo">
-                <img src="../images/image.png" alt="logo">
-                <h2>ECOCONECTA</h2>
+    <main class="redefinir-pagina">
+        <section class="redefinir-card">
+            <div class="redefinir-topo">
+                <img src="../images/image.png" alt="Logo do EcoConecta" class="redefinir-logo">
+                <div class="redefinir-marca">
+                    <h1>EcoConecta</h1>
+                    <p>Recupere o acesso à sua conta de forma simples e rápida.</p>
+                </div>
             </div>
 
-            <form class="form" id="formRedefinir">
+            <div class="redefinir-texto">
+                <h2>Redefinir senha</h2>
+                <p>Informe seu login, sua nova senha e confirme os dados para atualizar o acesso.</p>
+            </div>
 
-                <div class="form-group">
-                    <label>Usuário</label>
-                    <input type="text" id="login">
+            <form class="redefinir-formulario" id="formRedefinirSenha">
+                <div class="campo-formulario">
+                    <label for="loginRecuperacao">Login</label>
+                    <input type="text" id="loginRecuperacao" name="loginRecuperacao" placeholder="Digite seu login" required>
                 </div>
 
-                <div class="form-group">
-                    <label>Nova Senha</label>
-                    <input type="password" id="senha">
+                <div class="campo-formulario">
+                    <label for="novaSenha">Nova senha</label>
+                    <input type="password" id="novaSenha" name="novaSenha" placeholder="Digite a nova senha" required>
                 </div>
 
-                <div class="form-group">
-                    <label>Confirmar Senha</label>
-                    <input type="password" id="confirmarSenha">
+                <div class="campo-formulario">
+                    <label for="confirmarSenha">Confirmar senha</label>
+                    <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Repita a nova senha" required>
                 </div>
 
-                <button type="submit" class="btn">
-                    REDEFINIR
-                </button>
+                <button type="submit" class="botao-principal">Salvar nova senha</button>
 
+                <div class="redefinir-acoes">
+                    <a href="../index.html" class="link-login">Voltar para o login</a>
+                </div>
+
+                <p id="mensagemRedefinir" class="mensagem-login"></p>
             </form>
-
-        </div>
-
-        <div class="right">
-            <img src="../images/mundo.png" alt="mundo">
-        </div>
-
-    </div>
+        </section>
+    </main>
 
     <script src="../js/auth.js"></script>
-    <script>
-        const form = document.getElementById('formRedefinir');
-
-        form.addEventListener('submit', function(event){
-            event.preventDefault();
-
-            const login = document.getElementById('login').value.trim();
-            const senha = document.getElementById('senha').value;
-            const confirmarSenha = document.getElementById('confirmarSenha').value;
-
-            if(login === '' || senha === '' || confirmarSenha === ''){
-                alert('Preencha todos os campos');
-                return;
-            }
-
-            const usuarios = JSON.parse(localStorage.getItem(STORAGE_KEY));
-
-            if(!usuarios || !usuarios[login]){
-                alert('Usuário não encontrado');
-                return;
-            }
-
-            if(senha !== confirmarSenha){
-                alert('As senhas não coincidem');
-                return;
-            }
-
-            usuarios[login].senha = senha;
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(usuarios));
-            alert('Senha alterada com sucesso!');
-            window.location.href = '../index.html';
-        });
-    </script>
-
 </body>
 </html>

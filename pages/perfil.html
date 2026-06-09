@@ -1,131 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perfil - EcoConecta</title>
-  <link rel="stylesheet" href="../style/style.css">
-
-  <style>
-    .container{
-      height:640px;
-    }
-
-    .top{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      margin-top:5px;
-    }
-
-    .title{
-      margin-top:8px;
-      font-size:34px;
-      font-weight:bold;
-      color:#111;
-    }
-
-    .perfil-info{
-      margin-top:90px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:30px;
-    }
-
-    .perfil-info .nome{
-      font-size:28px;
-      font-weight:bold;
-      color:#26411b;
-    }
-
-    .perfil-info .label{
-      font-size:16px;
-      color:#555;
-    }
-
-    .acoes{
-      display:flex;
-      gap:20px;
-      margin-top:10px;
-    }
-
-    .acoes a{
-      width:170px;
-      padding:12px;
-      border:none;
-      border-radius:25px;
-      background:#8bab63;
-      font-weight:bold;
-      cursor:pointer;
-      transition:0.3s;
-      text-decoration:none;
-      color:#111;
-      text-align:center;
-      font-size:14px;
-    }
-
-    .acoes a:hover{
-      transform:scale(1.05);
-    }
-
-    @media(max-width:900px){
-      .acoes{
-        flex-direction:column;
-        align-items:center;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - EcoConecta</title>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
-
 <body>
 
-  <div class="container">
+    <header class="topo-site">
+        <div class="container topo-perfil">
+            <div class="marca-site">
+                <img src="../images/image.png" alt="Logo EcoConecta">
+                <h1>EcoConecta</h1>
+            </div>
 
-    <a class="back-btn" href="recicle.html">
-      Voltar
-    </a>
+            <div class="menu-dropdown-area">
+                <button class="botao-menu" id="botaoMenu" type="button">Menu</button>
 
-    <div class="top">
+                <nav class="menu-dropdown" id="menuDropdown">
+                    <a href="recicle.html">Início</a>
+                    <a href="perfil.html" class="ativo">Perfil</a>
+                    <a href="mapa.html">Mapa</a>
+                    <a href="selos.html">Selos</a>
+                    <a href="impacto.html">Impacto</a>
+                    <a href="dicas.html">Dicas</a>
+                    <a href="cooperativas.html">Cooperativas</a>
+                    <a href="desafios.html">Desafios</a>
+                    <a href="ranking.html">Ranking</a>
+                    <a href="noticias.html">Notícias</a>
+                    <a href="agenda.html">Agenda</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-      <div class="logo">
-        <img src="../images/image.png" alt="EcoConecta">
-      </div>
+    <main class="perfil-pagina">
+        <section class="container perfil-hero">
+            <div class="perfil-card">
+                <div class="perfil-topo">
+                    <div class="perfil-avatar">
+                        <img src="../images/image.png" alt="Usuário EcoConecta">
+                    </div>
 
-      <div class="title">
-        Perfil
-      </div>
+                    <div class="perfil-identidade">
+                        <span class="perfil-etiqueta">Conta do usuário</span>
+                        <h2 id="nomeUsuario">Usuário</h2>
+                        <p id="tipoUsuario">Perfil não identificado</p>
+                    </div>
+                </div>
 
-    </div>
+                <div class="perfil-dados">
+                    <div class="perfil-item">
+                        <span class="perfil-label">Login</span>
+                        <strong id="loginUsuario">—</strong>
+                    </div>
 
-    <div class="perfil-info">
+                    <div class="perfil-item">
+                        <span class="perfil-label">Perfil</span>
+                        <strong id="perfilUsuario">—</strong>
+                    </div>
 
-      <div class="label">Usuário logado</div>
-      <div class="nome" id="nomeUsuario">—</div>
+                    <div class="perfil-item">
+                        <span class="perfil-label">Status</span>
+                        <strong>Ativo no sistema</strong>
+                    </div>
+                </div>
 
-      <div class="acoes">
-        <a href="../index.html">Login</a>
-        <a href="redefinirPass.html">Redefinir Senha</a>
-      </div>
+                <div class="perfil-acoes">
+                    <a href="redefinirPass.html" class="botao-principal">Redefinir senha</a>
+                    <a href="../index.html" class="botao-secundario" id="sairConta">Sair da conta</a>
+                </div>
+            </div>
 
-    </div>
+            <div class="perfil-info-extra">
+                <article class="card perfil-bloco">
+                    <h3>Sobre este perfil</h3>
+                    <p>
+                        Esta área mostra as principais informações do usuário conectado ao EcoConecta,
+                        facilitando a identificação da conta e o acesso às ações principais.
+                    </p>
+                </article>
 
-    <div class="help" onclick="ajuda()">
-      ?
-    </div>
+                <article class="card perfil-bloco">
+                    <h3>Ações rápidas</h3>
+                    <p>
+                        Use esta página para confirmar os dados do usuário, atualizar a senha e retornar
+                        para a navegação principal do sistema.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
 
-  </div>
+    <footer class="rodape-site">
+        <p>EcoConecta - Projeto acadêmico de desenvolvimento web</p>
+    </footer>
 
-  <script>
-    function ajuda(){
-      alert("Página de perfil EcoConecta");
-    }
+    <script>
+        const botaoMenu = document.getElementById("botaoMenu");
+        const menuDropdown = document.getElementById("menuDropdown");
 
-    const logado = JSON.parse(localStorage.getItem("ecoconecta_logado"));
-    if(logado){
-      document.getElementById("nomeUsuario").textContent = logado.nome;
-    }
-  </script>
+        botaoMenu.addEventListener("click", function () {
+            menuDropdown.classList.toggle("aberto");
+        });
+
+        document.addEventListener("click", function (evento) {
+            const clicouDentroMenu = menuDropdown.contains(evento.target);
+            const clicouNoBotao = botaoMenu.contains(evento.target);
+
+            if (!clicouDentroMenu && !clicouNoBotao) {
+                menuDropdown.classList.remove("aberto");
+            }
+        });
+
+        const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+        if (usuarioLogado) {
+            document.getElementById("nomeUsuario").textContent = usuarioLogado.perfil || "Usuário";
+            document.getElementById("tipoUsuario").textContent = "Conta conectada ao sistema EcoConecta";
+            document.getElementById("loginUsuario").textContent = usuarioLogado.login || "—";
+            document.getElementById("perfilUsuario").textContent = usuarioLogado.perfil || "—";
+        }
+
+        document.getElementById("sairConta").addEventListener("click", function () {
+            localStorage.removeItem("usuarioLogado");
+        });
+    </script>
 
 </body>
 </html>

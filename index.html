@@ -1,195 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EcoConecta Login</title>
-  <link rel="stylesheet" href="style/style.css">
-
-  <style>
-    body{
-      background:#c9c3b1;
-    }
-
-    .container{
-      width:900px;
-      height:520px;
-      background:#d8efb2;
-      display:flex;
-      border-radius:4px;
-      overflow:hidden;
-      padding:0;
-    }
-
-    .left{
-      width:55%;
-      padding:40px;
-      display:flex;
-      flex-direction:column;
-    }
-
-    .logo{
-      width:70px;
-      height:70px;
-      border:2px solid #7a9b52;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      margin-bottom:10px;
-    }
-
-    .logo img{
-      width:40px;
-      height:40px;
-      object-fit:contain;
-    }
-
-    .brand{
-      font-size:12px;
-      font-weight:bold;
-      margin-bottom:60px;
-      color:#1d1d1d;
-    }
-
-    .form-group{
-      margin-bottom:12px;
-      width:250px;
-    }
-
-    label{
-      display:block;
-      font-size:11px;
-      font-weight:bold;
-      margin-bottom:4px;
-      color:#222;
-    }
-
-    input{
-      width:100%;
-      padding:10px;
-      border:none;
-      border-radius:3px;
-      background:#8eb26b;
-      color:white;
-      outline:none;
-    }
-
-    input::placeholder{
-      color:#e6e6e6;
-    }
-
-    .btn{
-      margin-top:12px;
-      width:170px;
-      padding:10px;
-      border:none;
-      border-radius:20px;
-      background:white;
-      cursor:pointer;
-      font-size:12px;
-      font-weight:bold;
-      transition:0.3s;
-    }
-
-    .btn:hover{
-      transform:scale(1.03);
-    }
-
-    .forgot{
-      margin-top:12px;
-      font-size:11px;
-      color:#365f96;
-      cursor:pointer;
-      width:fit-content;
-    }
-
-    .forgot:hover{
-      text-decoration:underline;
-    }
-
-    .register{
-      margin-top:auto;
-      font-size:11px;
-      color:#365f96;
-      cursor:pointer;
-    }
-
-    .right{
-      width:45%;
-      background:url('images/mundo.png')
-      center/cover no-repeat;
-      border-radius:20px 0 0 20px;
-      position:relative;
-    }
-
-    .overlay{
-      position:absolute;
-      inset:0;
-      background:rgba(154, 201, 83, 0.15);
-    }
-
-    @media(max-width:768px){
-      .container{
-        flex-direction:column;
-        width:95%;
-        height:auto;
-      }
-
-      .left, .right{
-        width:100%;
-      }
-
-      .right{
-        height:300px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoConecta - Login</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body>
+<body class="pagina-login">
 
-  <div class="container">
+    <main class="login-pagina">
+        <section class="login-card">
+            <div class="login-conteudo">
+                <div class="login-topo">
+                    <img src="images/image.png" alt="Logo do EcoConecta" class="login-logo">
+                    <div class="login-marca">
+                        <h1>EcoConecta</h1>
+                        <p>Plataforma voltada para reciclagem, impacto ambiental e ações sustentáveis.</p>
+                    </div>
+                </div>
 
-    <div class="left">
+                <div class="login-texto">
+                    <h2>Acesse sua conta</h2>
+                    <p>Entre com seu login e senha para continuar no sistema.</p>
+                </div>
 
-      <div class="logo"><img src="images/image.png" alt="EcoConecta"></div>
-      <div class="brand">ECOCONECTA</div>
+                <form id="formLogin" class="login-formulario">
+                    <div class="campo-formulario">
+                        <label for="login">Login</label>
+                        <input type="text" id="login" name="login" placeholder="Digite seu login" required>
+                    </div>
 
-      <div class="form-group">
-        <label>LOGIN</label>
-        <input type="text" id="login">
-      </div>
+                    <div class="campo-formulario">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                    </div>
 
-      <div class="form-group">
-        <label>SENHA</label>
-        <input type="password" id="senha">
-      </div>
+                    <button type="submit" class="botao-principal">Acessar conta</button>
 
-      <button class="btn" onclick="entrar()">
-        ACESSAR CONTA
-      </button>
+                    <div class="login-acoes">
+                        <a href="pages/redefinirPass.html" class="link-login">Esqueci minha senha</a>
+                        <button type="button" class="botao-link" id="btnRegistrar">Registrar</button>
+                    </div>
 
-      <a class="forgot" href="pages/redefinirPass.html">
-        ESQUECI MINHA SENHA
-      </a>
+                    <p id="mensagemLogin" class="mensagem-login"></p>
+                </form>
+            </div>
 
-      <div class="register" onclick="registrar()">
-        REGISTRAR
-      </div>
+            <div class="login-imagem-area">
+                <div class="login-imagem-sombra">
+                    <div class="login-imagem-texto">
+                        <h2>Conecte-se com um futuro mais sustentável</h2>
+                        <p>Acompanhe informações, ações e iniciativas ligadas ao projeto EcoConecta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    </div>
-
-    <div class="right">
-      <div class="overlay"></div>
-    </div>
-
-  </div>
-
-  <script src="js/auth.js"></script>
-  <script>
-    carregarUsuarios();
-  </script>
-
+    <script src="js/auth.js"></script>
 </body>
+
 </html>

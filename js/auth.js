@@ -1,68 +1,133 @@
-const STORAGE_KEY = "ecoconecta_usuarios";
+function carregarUsuarios() {
+const usuariosPadrao = [
+    { login: "admin", senha: "admin123", perfil: "Administrador" },
+    { login: "user", senha: "user123", perfil: "Usuário Teste" },
+    { login: "candidato", senha: "cand!098", perfil: "Perfil do Candidato" },
+    { login: "tutor", senha: "123456", perfil: "Perfil do tutor" },
+    { login: "ong", senha: "ong$-135", perfil: "Perfil da ONG" },
+    { login: "prefeitura", senha: "pref@456", perfil: "Perfil de prefeitura" },
+    
+];
 
-function carregarUsuarios(){
-  const padrao = {
-    admin: { senha: "admin123", nome: "Administrador" },
-    user:  { senha: "user123",  nome: "Usuário Teste" },
-    tutor: { senha: "123456", nome: "Perfil do tutor" },
-    ong:{ senha: "ong$-135", nome: "Perfil da ONG" },
-    prefeitura:{ senha: "pref@456", nome: "Perfil de prefeitura"}, 
-  };
+localStorage.setItem("usuarios", JSON.stringify(usuariosPadrao));
+}
 
-  const existentes = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-  let alterou = false;
-  for(const chave in padrao){
-    if(!existentes[chave]){
-      existentes[chave] = padrao[chave];
-      alterou = true;
+function entrar(login, senha) {
+const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+const mensagem = document.getElementById("mensagemLogin");
+
+if (!login || !senha) {
+    if (mensagem) {
+        mensagem.style.color = "#c0392b";
+        mensagem.textContent = "Preencha o login e a senha.";
     }
-  }
-  if(alterou) localStorage.setItem(STORAGE_KEY, JSON.stringify(existentes));
+    return;
 }
 
-function entrar(){
-  const login = document.getElementById("login").value.trim();
-  const senha = document.getElementById("senha").value;
+const usuarioEncontrado = usuarios.find(function (usuario) {
+    return usuario.login === login && usuario.senha === senha;
+});
 
-  if(login === "" || senha === ""){
-    alert("Preencha todos os campos");
+if (!usuarioEncontrado) {
+    if (mensagem) {
+        mensagem.style.color = "#c0392b";
+        mensagem.textContent = "Login ou senha inválidos.";
+    }
     return;
-  }
-
-  const usuarios = JSON.parse(localStorage.getItem(STORAGE_KEY));
-
-  if(!usuarios[login]){
-    alert("Usuário não encontrado");
-    return;
-  }
-
-  if(usuarios[login].senha !== senha){
-    alert("Senha incorreta");
-    return;
-  }
-
-  localStorage.setItem("ecoconecta_logado", JSON.stringify({
-    login: login,
-    nome: usuarios[login].nome
-  }));
-
-  window.location.href = "pages/recicle.html";
 }
 
-function registrar(){
-  const login = prompt("Novo nome de usuário:");
-  if(!login || login.trim() === "") return;
+localStorage.setItem("usuarioLogado", JSON.stringify(usuarioEncontrado));
 
-  const usuarios = JSON.parse(localStorage.getItem(STORAGE_KEY));
-  if(usuarios[login.trim()]){
-    alert("Usuário já existe");
+if (mensagem) {
+    mensagem.style.color = "#2e7d32";
+    mensagem.textContent = "Login realizado com sucesso.";
+}
+
+setTimeout(function () {
+    window.location.href = "./pages/recicle.html";
+}, 800);
+}
+
+function registrar() {
+alert("A área de cadastro será implementada.");
+}
+
+function redefinirSenha(login, novaSenha, confirmarSenha) {
+const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+const mensagem = document.getElementById("mensagemRedefinir");
+
+if (!login || !novaSenha || !confirmarSenha) {
+    if (mensagem) {
+        mensagem.style.color = "#c0392b";
+        mensagem.textContent = "Preencha todos os campos.";
+    }
     return;
-  }
+}
 
-  const senha = prompt("Nova senha:");
-  if(!senha || senha.trim() === "") return;
+if (novaSenha !== confirmarSenha) {
+    if (mensagem) {
+        mensagem.style.color = "#c0392b";
+        mensagem.textContent = "As senhas não coincidem.";
+    }
+    return;
+}
 
-  usuarios[login.trim()] = { senha: senha.trim(), nome: login.trim() };
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(usuarios));
-  alert("Usuário cadastrado com sucesso!");
+const indiceUsuario = usuarios.findIndex(function (usuario) {
+    return usuario.login === login;
+});
+
+if (indiceUsuario === -1) {
+    if (mensagem) {
+        mensagem.style.color = "#c0392b";
+        mensagem.textContent = "Usuário não encontrado.";
+    }
+    return;
+}
+
+usuarios[indiceUsuario].senha = novaSenha;
+localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+if (mensagem) {
+    mensagem.style.color = "#2e7d32";
+    mensagem.textContent = "Senha redefinida com sucesso.";
+}
+
+setTimeout(function () {
+    window.location.href = "../index.html";
+}, 1200);
+}
+
+carregarUsuarios();
+
+const formLogin = document.getElementById("formLogin");
+const btnRegistrar = document.getElementById("btnRegistrar");
+const formRedefinirSenha = document.getElementById("formRedefinirSenha");
+
+if (formLogin) {
+formLogin.addEventListener("submit", function (evento) {
+    evento.preventDefault();
+
+    const login = document.getElementById("login").value.trim();
+    const senha = document.getElementById("senha").value.trim();
+
+    entrar(login, senha);
+});
+}
+
+if (btnRegistrar) {
+btnRegistrar.addEventListener("click", function () {
+    registrar();
+});
+}
+
+if (formRedefinirSenha) {
+formRedefinirSenha.addEventListener("submit", function (evento) {
+    evento.preventDefault();
+
+    const login = document.getElementById("loginRecuperacao").value.trim();
+    const novaSenha = document.getElementById("novaSenha").value.trim();
+    const confirmarSenha = document.getElementById("confirmarSenha").value.trim();
+
+    redefinirSenha(login, novaSenha, confirmarSenha);
+});
 }

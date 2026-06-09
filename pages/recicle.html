@@ -1,156 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoConecta</title>
-  <link rel="stylesheet" href="../style/style.css">
-
-  <style>
-    .container{
-      height:650px;
-      display:flex;
-      overflow:hidden;
-      padding:0;
-    }
-
-    .left{
-      width:47%;
-      padding:20px 35px;
-      display:flex;
-      flex-direction:column;
-    }
-
-    .menu{
-      display:flex;
-      flex-wrap:wrap;
-      gap:6px;
-      margin-bottom:25px;
-    }
-
-    .menu a{
-      padding:4px 10px;
-      border:none;
-      border-radius:12px;
-      background:#8bab63;
-      color:#111;
-      font-size:11px;
-      cursor:pointer;
-      transition:0.3s;
-      text-decoration:none;
-    }
-
-    .menu a:hover{
-      transform:scale(1.05);
-    }
-
-    .logo-area{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      margin-top:10px;
-    }
-
-    .title{
-      margin-top:10px;
-      font-size:28px;
-      font-weight:bold;
-      color:#111;
-    }
-
-    .card{
-      width:280px;
-      background:#bde27d;
-      padding:35px 25px;
-      border-radius:6px;
-      margin-top:55px;
-      margin-left:25px;
-      line-height:1.5;
-      text-align:center;
-      color:#26411b;
-      font-size:15px;
-    }
-
-    .right{
-      width:53%;
-      position:relative;
-      background:
-      linear-gradient(rgba(210,255,160,0.35), rgba(210,255,160,0.35)),
-      url('../images/mundo.png');
-      background-size:cover;
-      background-position:center;
-      border-radius:25px 0 0 25px;
-    }
-
-    @media(max-width:900px){
-      .container{
-        flex-direction:column;
-      }
-
-      .left,
-      .right{
-        width:100%;
-      }
-
-      .right{
-        height:350px;
-      }
-
-      .card{
-        margin-left:0;
-        width:100%;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoConecta - Página Inicial</title>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
-
 <body>
 
-  <div class="container">
+    <header class="topo-site">
+        <div class="container topo-recicle">
+            <div class="marca-site">
+                <img src="../images/image.png" alt="Logo EcoConecta">
+                <h1>EcoConecta</h1>
+            </div>
 
-    <div class="left">
+            <div class="menu-dropdown-area">
+                <button class="botao-menu" id="botaoMenu" type="button">
+                    Menu
+                </button>
 
-      <div class="menu">
-        <a href="perfil.html">Perfil</a>
-        <a href="mapa.html">Mapa</a>
-        <a href="selos.html">Selos</a>
-        <a href="impacto.html">Impacto</a>
-        <a href="dicas.html">Dicas</a>
-        <a href="cooperativas.html">Cooperativas</a>
-        <a href="desafios.html">Desafios</a>
-        <a href="ranking.html">Ranking</a>
-        <a href="noticias.html">Notícias</a>
-        <a href="agenda.html">Agenda</a>
-      </div>
+                <nav class="menu-dropdown" id="menuDropdown">
+                    <a href="recicle.html" class="ativo">Início</a>
+                    <a href="perfil.html">Perfil</a>
+                    <a href="mapa.html">Mapa</a>
+                    <a href="selos.html">Selos</a>
+                    <a href="impacto.html">Impacto</a>
+                    <a href="dicas.html">Dicas</a>
+                    <a href="cooperativas.html">Cooperativas</a>
+                    <a href="desafios.html">Desafios</a>
+                    <a href="ranking.html">Ranking</a>
+                    <a href="noticias.html">Notícias</a>
+                    <a href="agenda.html">Agenda</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-      <div class="logo-area">
-        <div class="logo"><img src="../images/image.png" alt="EcoConecta"></div>
-        <div class="title">Ecoconecta</div>
-      </div>
+    <main class="recicle-pagina">
+        <section class="recicle-hero container">
+            <div class="recicle-texto">
+                <span class="recicle-etiqueta">Projeto EcoConecta</span>
+                <h2>Conectando pessoas, cooperativas e ações sustentáveis</h2>
+                <p>
+                    O EcoConecta aproxima eventos, recicladores e cooperativas, ajudando na coleta de resíduos,
+                    no acompanhamento do impacto ambiental e na valorização de práticas sustentáveis.
+                </p>
 
-      <div class="card" id="texto">
-        Conectamos eventos com recicladores e cooperativas próximas,
-        otimizando rotas e rastreando o impacto ambiental.
-        Receba mais selos sustentáveis e impulsione um futuro mais verde
-      </div>
+                <div class="recicle-botoes">
+                    <a href="mapa.html" class="botao-principal">Ver mapa</a>
+                    <a href="impacto.html" class="botao-secundario">Acompanhar impacto</a>
+                </div>
+            </div>
 
-    </div>
+            <div class="recicle-imagem">
+                <div class="recicle-imagem-sombra">
+                    <div class="recicle-destaque">
+                        <h3>Mais organização e mais impacto positivo</h3>
+                        <p>Otimize rotas, acompanhe resultados e incentive práticas conscientes em diferentes espaços.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="right">
+        <section class="container recicle-acessos">
+            <div class="recicle-cabecalho-secao">
+                <h2 class="titulo-secao">Acessos rápidos</h2>
+                <p class="texto">Navegue pelas principais áreas do sistema de forma simples e rápida.</p>
+            </div>
 
-      <div class="help" onclick="ajuda()">
-        ?
-      </div>
+            <div class="grid-3">
+                <article class="card recicle-card">
+                    <h3>Mapa</h3>
+                    <p>Visualize pontos e locais importantes para reciclagem e ações ambientais.</p>
+                    <a href="mapa.html" class="link-card">Acessar</a>
+                </article>
 
-    </div>
+                <article class="card recicle-card">
+                    <h3>Impacto</h3>
+                    <p>Veja informações sobre resultados, métricas e ações sustentáveis realizadas.</p>
+                    <a href="impacto.html" class="link-card">Acessar</a>
+                </article>
 
-  </div>
+                <article class="card recicle-card">
+                    <h3>Selos</h3>
+                    <p>Acompanhe reconhecimentos e incentivos ligados a boas práticas ambientais.</p>
+                    <a href="selos.html" class="link-card">Acessar</a>
+                </article>
+            </div>
+        </section>
 
-  <script>
-    function ajuda(){
-      alert("Central de ajuda EcoConecta");
-    }
-  </script>
+        <section class="container recicle-resumo">
+            <div class="grid-2">
+                <article class="card recicle-info">
+                    <h3>Como o sistema ajuda</h3>
+                    <p>
+                        O site facilita a conexão entre usuários, cooperativas e ações de reciclagem,
+                        promovendo organização, visibilidade e participação em práticas sustentáveis.
+                    </p>
+                </article>
+
+                <article class="card recicle-info">
+                    <h3>Objetivo do projeto</h3>
+                    <p>
+                        Incentivar a coleta seletiva, a conscientização ambiental e a criação de uma rede
+                        mais eficiente para o descarte correto de resíduos e o fortalecimento de cooperativas.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-site">
+        <p>EcoConecta - Projeto acadêmico de desenvolvimento web</p>
+    </footer>
+
+    <script>
+        const botaoMenu = document.getElementById("botaoMenu");
+        const menuDropdown = document.getElementById("menuDropdown");
+
+        botaoMenu.addEventListener("click", function () {
+            menuDropdown.classList.toggle("aberto");
+        });
+
+        document.addEventListener("click", function (evento) {
+            const clicouDentroMenu = menuDropdown.contains(evento.target);
+            const clicouNoBotao = botaoMenu.contains(evento.target);
+
+            if (!clicouDentroMenu && !clicouNoBotao) {
+                menuDropdown.classList.remove("aberto");
+            }
+        });
+    </script>
 
 </body>
 </html>

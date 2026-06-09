@@ -1,170 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ranking - EcoConecta</title>
-  <link rel="stylesheet" href="../style/style.css">
-
-  <style>
-    .container{
-      height:640px;
-    }
-
-    .top{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      margin-top:5px;
-    }
-
-    .title{
-      margin-top:8px;
-      font-size:34px;
-      font-weight:bold;
-      color:#111;
-    }
-
-    .tabela{
-      margin-top:40px;
-      width:100%;
-      border-collapse:collapse;
-    }
-
-    .tabela th{
-      text-align:left;
-      font-size:13px;
-      color:#555;
-      padding:8px 12px;
-      border-bottom:2px solid #8bab63;
-    }
-
-    .tabela td{
-      padding:10px 12px;
-      font-size:14px;
-      color:#26411b;
-      border-bottom:1px solid #bde27d;
-    }
-
-    .tabela .pos{
-      font-weight:bold;
-      text-align:center;
-      width:40px;
-    }
-
-    .tabela .ouro{
-      color:#b8860b;
-    }
-
-    .tabela .prata{
-      color:#708090;
-    }
-
-    .tabela .bronze{
-      color:#cd7f32;
-    }
-
-    .tabela .pts{
-      font-weight:bold;
-      text-align:right;
-    }
-
-    @media(max-width:900px){
-      .tabela{
-        font-size:12px;
-      }
-
-      .tabela td,
-      .tabela th{
-        padding:6px 8px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking - EcoConecta</title>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
-
 <body>
 
-  <div class="container">
+    <header class="topo-site">
+        <div class="container topo-ranking">
+            <div class="marca-site">
+                <img src="../images/image.png" alt="Logo EcoConecta">
+                <h1>EcoConecta</h1>
+            </div>
 
-    <a class="back-btn" href="recicle.html">Voltar</a>
+            <div class="menu-dropdown-area">
+                <button class="botao-menu" id="botaoMenu" type="button">Menu</button>
 
-    <div class="top">
-      <div class="logo">
-        <img src="../images/image.png" alt="EcoConecta">
-      </div>
-      <div class="title">Ranking</div>
-    </div>
+                <nav class="menu-dropdown" id="menuDropdown">
+                    <a href="recicle.html">Início</a>
+                    <a href="perfil.html">Perfil</a>
+                    <a href="mapa.html">Mapa</a>
+                    <a href="selos.html">Selos</a>
+                    <a href="impacto.html">Impacto</a>
+                    <a href="dicas.html">Dicas</a>
+                    <a href="cooperativas.html">Cooperativas</a>
+                    <a href="desafios.html">Desafios</a>
+                    <a href="ranking.html" class="ativo">Ranking</a>
+                    <a href="noticias.html">Notícias</a>
+                    <a href="agenda.html">Agenda</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-    <table class="tabela">
-      <thead>
-        <tr>
-          <th class="pos">#</th>
-          <th>Usuário</th>
-          <th>Selos</th>
-          <th class="pts">Pontos</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="pos ouro">🥇</td>
-          <td>Ana Costa</td>
-          <td>7</td>
-          <td class="pts">2.450</td>
-        </tr>
-        <tr>
-          <td class="pos prata">🥈</td>
-          <td>Carlos Lima</td>
-          <td>5</td>
-          <td class="pts">1.980</td>
-        </tr>
-        <tr>
-          <td class="pos bronze">🥉</td>
-          <td>Marina Souza</td>
-          <td>5</td>
-          <td class="pts">1.870</td>
-        </tr>
-        <tr>
-          <td class="pos">4</td>
-          <td>Rafael Oliveira</td>
-          <td>4</td>
-          <td class="pts">1.520</td>
-        </tr>
-        <tr>
-          <td class="pos">5</td>
-          <td>Juliana Mendes</td>
-          <td>3</td>
-          <td class="pts">1.310</td>
-        </tr>
-        <tr>
-          <td class="pos">6</td>
-          <td>Pedro Santos</td>
-          <td>3</td>
-          <td class="pts">1.120</td>
-        </tr>
-        <tr>
-          <td class="pos">7</td>
-          <td>Lucia Ferreira</td>
-          <td>2</td>
-          <td class="pts">890</td>
-        </tr>
-        <tr>
-          <td class="pos">8</td>
-          <td>João Almeida</td>
-          <td>2</td>
-          <td class="pts">760</td>
-        </tr>
-      </tbody>
-    </table>
+    <main class="ranking-pagina">
+        <section class="container ranking-hero">
+            <div class="ranking-texto">
+                <span class="ranking-etiqueta">Classificação</span>
+                <h2>Usuários com maior participação sustentável</h2>
+                <p>
+                    Acompanhe os participantes com mais pontos acumulados, mais selos
+                    conquistados e maior engajamento nas ações ecológicas do EcoConecta.
+                </p>
+            </div>
+        </section>
 
-    <div class="help" onclick="ajuda()">?</div>
+        <section class="container ranking-tabela-area">
+            <div class="ranking-tabela-box">
+                <table class="tabela-ranking">
+                    <thead>
+                        <tr>
+                            <th class="col-pos">#</th>
+                            <th>Usuário</th>
+                            <th>Selos</th>
+                            <th class="col-pontos">Pontos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top1">
+                            <td class="col-pos">🥇</td>
+                            <td>Ana Costa</td>
+                            <td>7</td>
+                            <td class="col-pontos">2.450</td>
+                        </tr>
+                        <tr class="top2">
+                            <td class="col-pos">🥈</td>
+                            <td>Carlos Lima</td>
+                            <td>5</td>
+                            <td class="col-pontos">1.980</td>
+                        </tr>
+                        <tr class="top3">
+                            <td class="col-pos">🥉</td>
+                            <td>Marina Souza</td>
+                            <td>5</td>
+                            <td class="col-pontos">1.870</td>
+                        </tr>
+                        <tr>
+                            <td class="col-pos">4</td>
+                            <td>Rafael Oliveira</td>
+                            <td>4</td>
+                            <td class="col-pontos">1.520</td>
+                        </tr>
+                        <tr>
+                            <td class="col-pos">5</td>
+                            <td>Juliana Mendes</td>
+                            <td>3</td>
+                            <td class="col-pontos">1.310</td>
+                        </tr>
+                        <tr>
+                            <td class="col-pos">6</td>
+                            <td>Pedro Santos</td>
+                            <td>3</td>
+                            <td class="col-pontos">1.120</td>
+                        </tr>
+                        <tr>
+                            <td class="col-pos">7</td>
+                            <td>Lucia Ferreira</td>
+                            <td>2</td>
+                            <td class="col-pontos">890</td>
+                        </tr>
+                        <tr>
+                            <td class="col-pos">8</td>
+                            <td>João Almeida</td>
+                            <td>2</td>
+                            <td class="col-pontos">760</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
 
-  </div>
+    <footer class="rodape-site">
+        <p>EcoConecta - Projeto acadêmico de desenvolvimento web</p>
+    </footer>
 
-  <script>
-    function ajuda(){
-      alert("Ranking de usuários - EcoConecta");
-    }
-  </script>
+    <script>
+        const botaoMenu = document.getElementById("botaoMenu");
+        const menuDropdown = document.getElementById("menuDropdown");
+
+        botaoMenu.addEventListener("click", function () {
+            menuDropdown.classList.toggle("aberto");
+        });
+
+        document.addEventListener("click", function (evento) {
+            const clicouDentroMenu = menuDropdown.contains(evento.target);
+            const clicouNoBotao = botaoMenu.contains(evento.target);
+
+            if (!clicouDentroMenu && !clicouNoBotao) {
+                menuDropdown.classList.remove("aberto");
+            }
+        });
+    </script>
 
 </body>
 </html>

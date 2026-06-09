@@ -1,168 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Selos - EcoConecta</title>
-  <link rel="stylesheet" href="../style/style.css">
-
-  <style>
-    .container{
-      height:640px;
-    }
-
-    .top{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      margin-top:5px;
-    }
-
-    .title{
-      margin-top:8px;
-      font-size:30px;
-      font-weight:bold;
-      color:#111;
-    }
-
-    .badges{
-      margin-top:70px;
-      display:grid;
-      grid-template-columns:repeat(5, 1fr);
-      gap:40px 25px;
-      justify-items:center;
-    }
-
-    .badge{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      text-align:center;
-      transition:0.3s;
-      cursor:pointer;
-    }
-
-    .badge:hover{
-      transform:translateY(-6px);
-    }
-
-    .circle{
-      width:110px;
-      height:110px;
-      border-radius:50%;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      font-size:50px;
-      margin-bottom:10px;
-      color:#1d4b2d;
-      font-weight:bold;
-    }
-
-    .light{
-      background:#b8d69c;
-    }
-
-    .dark{
-      background:#62b356;
-      color:white;
-    }
-
-    .badge span{
-      font-size:18px;
-      font-weight:bold;
-      color:#21411c;
-      line-height:1.2;
-    }
-
-    @media(max-width:900px){
-      .badges{
-        grid-template-columns:repeat(2, 1fr);
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selos - EcoConecta</title>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
-
 <body>
 
-  <div class="container">
+    <header class="topo-site">
+        <div class="container topo-selos">
+            <div class="marca-site">
+                <img src="../images/image.png" alt="Logo EcoConecta">
+                <h1>EcoConecta</h1>
+            </div>
 
-    <a class="back-btn" href="recicle.html">
-      Voltar
-    </a>
+            <div class="menu-dropdown-area">
+                <button class="botao-menu" id="botaoMenu" type="button">Menu</button>
 
-    <div class="top">
+                <nav class="menu-dropdown" id="menuDropdown">
+                    <a href="recicle.html">Início</a>
+                    <a href="perfil.html">Perfil</a>
+                    <a href="mapa.html">Mapa</a>
+                    <a href="selos.html" class="ativo">Selos</a>
+                    <a href="impacto.html">Impacto</a>
+                    <a href="dicas.html">Dicas</a>
+                    <a href="cooperativas.html">Cooperativas</a>
+                    <a href="desafios.html">Desafios</a>
+                    <a href="ranking.html">Ranking</a>
+                    <a href="noticias.html">Notícias</a>
+                    <a href="agenda.html">Agenda</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-      <div class="logo">
-        <img src="../images/image.png" alt="EcoConecta">
-      </div>
+    <main class="selos-pagina">
+        <section class="container selos-hero">
+            <div class="selos-texto">
+                <span class="selos-etiqueta">Reconhecimentos</span>
+                <h2>Selos ecológicos conquistados no EcoConecta</h2>
+                <p>
+                    Os selos representam ações sustentáveis realizadas dentro da plataforma,
+                    incentivando participação, constância e hábitos positivos relacionados à reciclagem.
+                </p>
+            </div>
+        </section>
 
-      <div class="title">
-        Selos
-      </div>
+        <section class="container selos-grade">
+            <article class="selo-card">
+                <div class="selo-icone light">📦</div>
+                <h3>Reutilizador Criativo</h3>
+            </article>
 
-    </div>
+            <article class="selo-card">
+                <div class="selo-icone light">🗑️</div>
+                <h3>Coleta Consciente</h3>
+            </article>
 
-    <div class="badges">
+            <article class="selo-card">
+                <div class="selo-icone light">♻️</div>
+                <h3>Reciclador Iniciante</h3>
+            </article>
 
-      <div class="badge">
-        <div class="circle light">📦</div>
-        <span>Reutilizador<br>Criativo</span>
-      </div>
+            <article class="selo-card">
+                <div class="selo-icone dark">🌿</div>
+                <h3>Guardião Verde</h3>
+            </article>
 
-      <div class="badge">
-        <div class="circle light">🗑️</div>
-        <span>Coleta<br>Consciente</span>
-      </div>
+            <article class="selo-card">
+                <div class="selo-icone light">✅</div>
+                <h3>Constância Ecológica</h3>
+            </article>
 
-      <div class="badge">
-        <div class="circle light">♻️</div>
-        <span>Reciclador<br>Iniciante</span>
-      </div>
+            <article class="selo-card">
+                <div class="selo-icone dark">∞</div>
+                <h3>Eco-hábito</h3>
+            </article>
 
-      <div class="badge">
-        <div class="circle dark">🌿</div>
-        <span>Guardião<br>Verde</span>
-      </div>
+            <article class="selo-card">
+                <div class="selo-icone light">🧠</div>
+                <h3>Consciente</h3>
+            </article>
 
-      <div class="badge">
-        <div class="circle light">✅</div>
-        <span>Constância<br>Ecológica</span>
-      </div>
+            <article class="selo-card">
+                <div class="selo-icone light">🌱</div>
+                <h3>1kg Reciclado</h3>
+            </article>
 
-      <div class="badge">
-        <div class="circle dark">∞</div>
-        <span>Eco-hábito</span>
-      </div>
+            <article class="selo-card">
+                <div class="selo-icone light">🌳</div>
+                <h3>10kg Reciclados</h3>
+            </article>
+        </section>
 
-      <div class="badge">
-        <div class="circle light">🧠</div>
-        <span>Consciente</span>
-      </div>
+        <section class="container selos-resumo">
+            <article class="card selo-box">
+                <h3>Importância dos selos</h3>
+                <p>
+                    Os selos ajudam a valorizar boas práticas ambientais e tornam a experiência do usuário
+                    mais motivadora ao reconhecer metas e atitudes sustentáveis.
+                </p>
+            </article>
+        </section>
+    </main>
 
-      <div class="badge">
-        <div class="circle light">🌱</div>
-        <span>1kg<br>Reciclado</span>
-      </div>
+    <footer class="rodape-site">
+        <p>EcoConecta - Projeto acadêmico de desenvolvimento web</p>
+    </footer>
 
-      <div class="badge">
-        <div class="circle light">🌳</div>
-        <span>10kg<br>Reciclados</span>
-      </div>
+    <script>
+        const botaoMenu = document.getElementById("botaoMenu");
+        const menuDropdown = document.getElementById("menuDropdown");
 
-    </div>
+        botaoMenu.addEventListener("click", function () {
+            menuDropdown.classList.toggle("aberto");
+        });
 
-    <div class="help" onclick="ajuda()">
-      ?
-    </div>
+        document.addEventListener("click", function (evento) {
+            const clicouDentroMenu = menuDropdown.contains(evento.target);
+            const clicouNoBotao = botaoMenu.contains(evento.target);
 
-  </div>
-
-  <script>
-    function ajuda(){
-      alert("Página de selos ecológicos EcoConecta");
-    }
-  </script>
+            if (!clicouDentroMenu && !clicouNoBotao) {
+                menuDropdown.classList.remove("aberto");
+            }
+        });
+    </script>
 
 </body>
 </html>
